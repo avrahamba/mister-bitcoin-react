@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/mister-bitcoin-react/static/css/main.aa8d40e3.chunk.css",
+    "main.js": "/mister-bitcoin-react/static/js/main.f3ffe79f.chunk.js",
+    "main.js.map": "/mister-bitcoin-react/static/js/main.f3ffe79f.chunk.js.map",
+    "runtime-main.js": "/mister-bitcoin-react/static/js/runtime-main.32249ce4.js",
+    "runtime-main.js.map": "/mister-bitcoin-react/static/js/runtime-main.32249ce4.js.map",
+    "static/js/2.b4cd6948.chunk.js": "/mister-bitcoin-react/static/js/2.b4cd6948.chunk.js",
+    "static/js/2.b4cd6948.chunk.js.map": "/mister-bitcoin-react/static/js/2.b4cd6948.chunk.js.map",
+    "index.html": "/mister-bitcoin-react/index.html",
+    "precache-manifest.d10b357450e668d38831d68c49274c5a.js": "/mister-bitcoin-react/precache-manifest.d10b357450e668d38831d68c49274c5a.js",
+    "service-worker.js": "/mister-bitcoin-react/service-worker.js",
+    "static/css/main.aa8d40e3.chunk.css.map": "/mister-bitcoin-react/static/css/main.aa8d40e3.chunk.css.map",
+    "static/js/2.b4cd6948.chunk.js.LICENSE.txt": "/mister-bitcoin-react/static/js/2.b4cd6948.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/mister-bitcoin-react/static/media/Nunito-Regular.d2e691bc.ttf",
+    "static/media/add-contact.svg": "/mister-bitcoin-react/static/media/add-contact.da05397d.svg",
+    "static/media/back.svg": "/mister-bitcoin-react/static/media/back.7a10c171.svg",
+    "static/media/bitcoin.svg": "/mister-bitcoin-react/static/media/bitcoin.56e5ff88.svg",
+    "static/media/edit-contact.svg": "/mister-bitcoin-react/static/media/edit-contact.570dbdbd.svg",
+    "static/media/home.svg": "/mister-bitcoin-react/static/media/home.8eacb5a5.svg",
+    "static/media/members.svg": "/mister-bitcoin-react/static/media/members.de02feb6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.32249ce4.js",
+    "static/js/2.b4cd6948.chunk.js",
+    "static/css/main.aa8d40e3.chunk.css",
+    "static/js/main.f3ffe79f.chunk.js"
+  ]
+}
