@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class ConractFilter extends Component {
+export class ContactFilter extends Component {
     state = {
         term: ''
     }
@@ -17,7 +17,7 @@ export class ConractFilter extends Component {
 
     render() {
         return (
-            <div>
+            <div className="contact-filter">
                 <form>
                     <input
                         type="text"

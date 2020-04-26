@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom';
 
 export const ContactPreview = ({ contact }) => {
     return (
-        <div>
-
-                <NavLink to={'/contact/' + contact._id}>
-                    <p>
-                        {contact.name}
-                    </p>
-                </NavLink>
-        </div>
+        <NavLink to={'/contact/' + contact._id}>
+            <div className="contact-preview">
+                <img src={'https://robohash.org/'+contact._id} alt={contact.name}/>
+                <p>
+                    {contact.name}
+                </p>
+            </div>
+        </NavLink>
     )
 }

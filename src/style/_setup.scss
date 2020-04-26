@@ -1,0 +1,27 @@
+$clr1: #393939;
+$clr2: #9fa6ad;
+$clr3: #2d2d2d;
+$clr4: #3e4a52;
+
+@font-face {
+    font-family: Nunito;
+    src: url(../assets/fonts/Nunito-Regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $clr1;
+    color: $clr2;
+    font-family: Nunito;
+}
+
+body{
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}

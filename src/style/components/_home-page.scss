@@ -1,0 +1,46 @@
+.home-page {
+    padding: 20px;
+    font-size: 1.5rem;
+    p {
+        display: flex;
+        img {
+            width: 30px;
+        }
+        span {
+            color: #ff9900;
+        }
+    }
+    .dolar {
+        margin-left: 6px;
+        color: #109618;
+    }
+    .set-cart {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        button {
+            color: $clr2;
+            background: $clr4;
+            padding: 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    }
+// .titles{
+//     text-align: center;
+// }
+    .details{
+        @media (min-width:1000px) {
+            display: flex;
+            justify-content: space-around;
+            .bitcoin{
+                width: 100%;
+            }
+            .moves{
+                padding: 0 40px;
+            }
+        }
+    }
+}

@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
-import { contactService } from '../services/ContacrServie.js';
+import { connect } from 'react-redux';
+
+import { loadContactById, saveContact, deleteContact } from '../actions/ContactActions'
+
 import { Redirect } from 'react-router';
+import addContactSvg from '../assets/imgs/add-contact.svg';
 
-
-export class ContactEditPage extends Component {
+class ContactEditPage extends Component {
     state = {
         contact: {
             name: '',
@@ -14,12 +17,12 @@ export class ContactEditPage extends Component {
     async componentDidMount() {
         const id = this.props.match.params.id
         if (id) {
-            this.setState({deleteStr:'Delete'})
-            contactService.getContactById(id)
-            .then(contact => { this.setState({ contact }) })
-            .catch(_ => { })
+            this.setState({ deleteStr: 'Delete' })
+            this.props.loadContactById(id)
+                .then(_ => this.setState({ contact: JSON.parse(JSON.stringify(this.props.currContact)), img: `https://robohash.org/${this.props.currContact._id}.png` }))
+                .catch(_ => { })
         }
-        else this.setState({deleteStr:'Cancel'})
+        else this.setState({ deleteStr: 'Cancel', img: addContactSvg })
     }
     handleInputChange = (field, value) => {
         this.setState(({ contact }) => {
@@ -27,12 +30,12 @@ export class ContactEditPage extends Component {
         })
     }
     handleSave = _ => {
-        contactService.saveContact(this.state.contact)
+        this.props.saveContact(this.state.contact)
             .then(contact => this.setState({ redirect: true, newId: contact._id }))
     }
-    handleDelete=_=> {
+    handleDelete = _ => {
         if (this.state.contact._id) {
-            contactService.deleteContact(this.state.contact._id)
+            this.props.deleteContact(this.state.contact._id)
                 .then(_ => this.setState({ back: true }))
         } else this.setState({ back: true })
 
@@ -53,19 +56,34 @@ export class ContactEditPage extends Component {
         }
 
         return (
-            <div>
-                <img
-                    src={`https://robohash.org/${contact._id}.png`}
-                    alt=""
-                />
+            <div className="contact-edit">
                 <form onSubmit={ev => ev.preventDefault()}>
+                    <img src={this.state?.img} alt="" />
                     <input type="text" onChange={ev => this.handleInputChange('name', ev.target.value)} placeholder="Name" value={contact.name} />
                     <input type="text" onChange={ev => this.handleInputChange('email', ev.target.value)} placeholder="Email" value={contact.email} />
                     <input type="text" onChange={ev => this.handleInputChange('phone', ev.target.value)} placeholder="phone" value={contact.phone} />
-                    <button onClick={this.handleSave}>Save</button>
+                    <div className="btn">
+                        <button onClick={this.handleSave}>Save Contact</button>
+                        <button className="del" onClick={this.handleDelete}>{this.state.deleteStr}</button>
+                    </div>
                 </form>
-                <button onClick={this.handleDelete}>{this.state.deleteStr}</button>
             </div>
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        currContact: state.contact.currContact,
+    };
+};
+
+const mapDispatchToProps = {
+    loadContactById,
+    saveContact,
+    deleteContact
+};
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactEditPage);
