@@ -26,11 +26,11 @@ const [,setUser] =  useState(null)
           <Router>
             <NavBar></NavBar>
             <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route path="/contact/:id" component={ContactDetailsPage} />
-              <Route path="/contact" component={ContactPage} />
-              <Route path="/edit/:id?" component={ContactEditPage} />
-              <Route path="/statistic" component={StatisticPage} />
+              <Route exact path="/mister-bitcoin-react" component={HomePage} />
+              <Route path="/mister-bitcoin-react/contact/:id" component={ContactDetailsPage} />
+              <Route path="/mister-bitcoin-react/contact" component={ContactPage} />
+              <Route path="/mister-bitcoin-react/edit/:id?" component={ContactEditPage} />
+              <Route path="/mister-bitcoin-react/statistic" component={StatisticPage} />
             </Switch>
           </Router>
         ) : <SignupPage signup={signupHelnder} />

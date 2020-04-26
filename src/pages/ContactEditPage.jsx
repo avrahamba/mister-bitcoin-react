@@ -44,11 +44,11 @@ class ContactEditPage extends Component {
         const { contact } = this.state;
 
         if (this.state.redirect) {
-            if (contact._id) return <Redirect push to={'/contact/' + contact._id} />;
-            else return <Redirect push to={'/contact/' + this.state.newId} />;
+            if (contact._id) return <Redirect push to={'/mister-bitcoin-react/contact/' + contact._id} />;
+            else return <Redirect push to={'/mister-bitcoin-react/contact/' + this.state.newId} />;
         }
         if (this.state.back) {
-            return <Redirect push to="/contact" />;
+            return <Redirect push to="/mister-bitcoin-react/contact" />;
         }
 
         if (!contact) {

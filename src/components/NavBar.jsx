@@ -6,11 +6,11 @@ import membersSvg from '../assets/imgs/members.svg';
 export const NavBar = () => {
     return (
         <div className="nav-bar">
-            <NavLink to="/">
+            <NavLink to="/mister-bitcoin-react">
                 <img src={homeSvg} alt="Home" title="Home" />
             </NavLink>
 
-            <NavLink to="/contact">
+            <NavLink to="/mister-bitcoin-react/contact">
                 <img src={membersSvg} alt="Contact" title="Contact" />
 
             </NavLink>

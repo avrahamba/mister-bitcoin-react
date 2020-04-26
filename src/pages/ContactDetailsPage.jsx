@@ -29,10 +29,10 @@ class ContactDetailsPage extends Component {
         return (
             <div className="contact-details-page">
                 <nav>
-                    <NavLink to="/contact">
+                    <NavLink to="/mister-bitcoin-react/contact">
                         <img src={backSvg} alt="Back" />
                     </NavLink>
-                    <NavLink to={'/edit/' + contact._id}>
+                    <NavLink to={'/mister-bitcoin-react/edit/' + contact._id}>
                         <img src={editSvg} alt="Edit" />
                     </NavLink>
                 </nav>

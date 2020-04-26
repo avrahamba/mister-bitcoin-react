@@ -28,7 +28,7 @@ class ContactPage extends Component {
             <div className="contact-page">
                 <ContactFilter onFilter={this.onFileHendler} filterBy={this.state.filterBy}></ContactFilter>
                 <ContactList contacts={this.props.contacts} />
-                <NavLink to="/edit">
+                <NavLink to="/mister-bitcoin-react/edit">
                     <img className="add" src={addContactSvg} alt="add" title="Add"/>
                 </NavLink>
             </div>
